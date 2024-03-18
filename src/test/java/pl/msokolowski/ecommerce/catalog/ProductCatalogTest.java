@@ -12,16 +12,20 @@ public class ProductCatalogTest {
 
     @Test
     void itListAvailableProducts() {
-        ProductCatalog catalog = new ProductCatalog();
+        ProductCatalog catalog = thereIsProductCatalog();
 
         List<Product> products = catalog.allProducts();
 
         assert products.isEmpty();
     }
 
+    private static ProductCatalog thereIsProductCatalog() {
+        return new ProductCatalog();
+    }
+
     @Test
     void itAllowsToAddProduct() {
-        ProductCatalog catalog = new ProductCatalog();
+        ProductCatalog catalog = thereIsProductCatalog();
 
         catalog.addProduct("Lego set8083", "Nice one");
         List<Product> products = catalog.allProducts();
@@ -32,7 +36,7 @@ public class ProductCatalogTest {
 
     @Test
     void itLoadsSingleProductById() {
-        ProductCatalog catalog = new ProductCatalog();
+        ProductCatalog catalog = thereIsProductCatalog();
         String id = catalog.addProduct("Lego set8083", "Nice one");
 
         Product loaded = catalog.getProductBy(id);
@@ -43,7 +47,7 @@ public class ProductCatalogTest {
 
     @Test
     void itAllowsChangePrice() {
-        ProductCatalog catalog = new ProductCatalog();
+        ProductCatalog catalog = thereIsProductCatalog();
         String id = catalog.addProduct("Lego set8083", "Nice one");
 
         catalog.changePrice(id, BigDecimal.valueOf(10.10));
