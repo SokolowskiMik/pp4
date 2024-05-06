@@ -1,4 +1,4 @@
-package pl.jkanclerz.creditcard;
+package pl.msokolowski.creditcard;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
