@@ -1,7 +1,9 @@
-package pl.msokolowski.creditcard;
+package pl.jkanclerz.creditcard;
+
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import org.junit.jupiter.api.Test;
+
 public class NumberRepresentationTest {
 
     @Test
@@ -11,6 +13,7 @@ public class NumberRepresentationTest {
         System.out.println("Double");
         System.out.println(b - a);
     }
+
     @Test
     void floatTest() {
         float a = 0.002f;
@@ -20,9 +23,10 @@ public class NumberRepresentationTest {
     }
 
     @Test
-    void BigDecimalTest() {
+    void bigDecimalTest() {
         BigDecimal a = new BigDecimal("0.002");
-        BigDecimal b = new BigDecimal("0.003");
+        BigDecimal b= new BigDecimal("0.003");
+
         System.out.println("Big Decimal");
         System.out.println(a.subtract(b));
     }
