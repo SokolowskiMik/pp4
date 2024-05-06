@@ -6,3 +6,11 @@ async function logProducts() {
 
 const hello = () => alert("It works");
 hello();
+
+getProducts = () => {
+    return fetch("/api/products").then(response => response.json());
+}
+
+getCurrentOffer = () => {
+    return fetch("/api/current-offer").then(response => response.json());
+}
