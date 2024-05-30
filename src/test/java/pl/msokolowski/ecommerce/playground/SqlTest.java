@@ -1,4 +1,4 @@
-package pl.msokolowski.ecommerce.playground;
+package pl.jkanclerz.ecommerce.playground;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package pl.msokolowski.ecommerce.catalog;
+package pl.jkanclerz.ecommerce.catalog;
 
 import java.math.BigDecimal;
 import java.util.List;

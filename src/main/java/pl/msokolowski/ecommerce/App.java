@@ -1,11 +1,12 @@
-package pl.msokolowski.ecommerce;
+package pl.jkanclerz.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import pl.msokolowski.ecommerce.catalog.ArrayListProductStorage;
-import pl.msokolowski.ecommerce.catalog.ProductCatalog;
-import pl.msokolowski.ecommerce.sales.SalesFacade;
+import pl.jkanclerz.ecommerce.catalog.ArrayListProductStorage;
+import pl.jkanclerz.ecommerce.catalog.ProductCatalog;
+import pl.jkanclerz.ecommerce.sales.SalesFacade;
+import pl.jkanclerz.ecommerce.sales.cart.HashMapCartStorage;
 
 import java.math.BigDecimal;
 
@@ -30,6 +31,6 @@ public class App {
 
     @Bean
     SalesFacade createSales() {
-        return new SalesFacade();
+        return new SalesFacade(new HashMapCartStorage());
     }
 }

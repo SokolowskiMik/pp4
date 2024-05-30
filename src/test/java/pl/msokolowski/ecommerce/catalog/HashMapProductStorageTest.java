@@ -1,4 +1,4 @@
-package pl.msokolowski.ecommerce.catalog;
+package pl.jkanclerz.ecommerce.catalog;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;

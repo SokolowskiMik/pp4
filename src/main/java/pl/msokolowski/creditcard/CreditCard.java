@@ -1,4 +1,4 @@
-package pl.msokolowski.creditcard;
+package pl.jkanclerz.creditcard;
 
 import java.math.BigDecimal;
 

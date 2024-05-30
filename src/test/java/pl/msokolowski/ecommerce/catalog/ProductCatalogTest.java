@@ -1,7 +1,7 @@
-package pl.msokolowski.ecommerce.catalog;
+package pl.jkanclerz.ecommerce.catalog;
 
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 
 import java.math.BigDecimal;
