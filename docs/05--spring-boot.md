@@ -6,7 +6,7 @@ https://spring.io/quickstart
 
 ### ToDoes
 - Install spring dependency
-- Add static UI (index.html, index.js, index.css)
+- Add static UI (index.html, main.js, index.css)
 - Register first HTTP controller
 - Configure Product catalog to be available via HTTP 
 

@@ -1,11 +1,44 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>My ecommerce</title>
-        <link href="/css/main.css" rel="stylesheet"/>
+        <link rel="stylesheet"  href="/css/main.css">
     </head>
     <body>
-        <h1>Welcome @ My ecommerce</h1>
-        <ul id="productList" class="products"></ul>
-        <script src="/js/index.js" type="text/javascript"></script>
+        <header>
+
+            <div class="offer">
+
+                <span>Total:</span>
+                <span id="offer__items-total">0.0</span>
+
+            </div>
+
+            <div>
+
+                <span>items count:</span>
+                <span id="offer__items-count">0</span>
+
+            </div>
+
+            <form id="checkout">
+                <input name="first name" placeholder="John"/>
+                <input name="last name" placeholder="Doe"/>
+                <input name="email" type="email" placeholder="john.doe@example.com"/>
+                <button type="submit">Accept offer</button>
+            </form>
+
+
+
+        </header>
+
+
+
+
+        <h1>My Ecommerce</h1>
+        <ul id="productsList" class="productsList"></ul>
+        <p>src/main/resources/static/index.html</p>
+        <script type="text/javascript" src="/js/main.js"></script>
     </body>
 </html>
