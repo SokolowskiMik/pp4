@@ -1,6 +1,10 @@
-package pl.jkanclerz.ecommerce.sales;
+package pl.msokolowski.ecommerce.sales;
 
 import org.springframework.web.bind.annotation.*;
+
+import pl.msokolowski.ecommerce.sales.offering.Offer;
+import pl.msokolowski.ecommerce.sales.reservation.AcceptOfferRequest;
+import pl.msokolowski.ecommerce.sales.reservation.ReservationDetails;
 
 @RestController
 public class SalesController {

@@ -1,4 +1,4 @@
-package pl.jkanclerz.ecommerce.sales;
+package pl.msokolowski.ecommerce.sales.reservation;
 
 public class AcceptOfferRequest {
     private String fname;

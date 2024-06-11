@@ -1,12 +1,18 @@
-package pl.jkanclerz.ecommerce;
+package pl.msokolowski.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import pl.jkanclerz.ecommerce.catalog.ArrayListProductStorage;
-import pl.jkanclerz.ecommerce.catalog.ProductCatalog;
-import pl.jkanclerz.ecommerce.sales.SalesFacade;
-import pl.jkanclerz.ecommerce.sales.cart.HashMapCartStorage;
+
+import pl.msokolowski.ecommerce.catalog.ArrayListProductStorage;
+import pl.msokolowski.ecommerce.catalog.ProductCatalog;
+import pl.msokolowski.ecommerce.sales.SalesFacade;
+import pl.msokolowski.ecommerce.sales.cart.HashMapCartStorage;
+import pl.msokolowski.ecommerce.sales.offering.OfferCalculator;
+import pl.msokolowski.ecommerce.sales.payment.PaymentDetails;
+import pl.msokolowski.ecommerce.sales.payment.PaymentGateway;
+import pl.msokolowski.ecommerce.sales.payment.RegisterPaymentRequest;
+import pl.msokolowski.ecommerce.sales.reservation.ReservationRepository;
 
 import java.math.BigDecimal;
 
@@ -31,6 +37,16 @@ public class App {
 
     @Bean
     SalesFacade createSales() {
-        return new SalesFacade(new HashMapCartStorage());
+        return new SalesFacade(
+                new HashMapCartStorage(),
+                new OfferCalculator(),
+                new PaymentGateway() {
+                    @Override
+                    public PaymentDetails registerPayment(RegisterPaymentRequest registerPaymentRequest) {
+                        return null;
+                    }
+                },
+                new ReservationRepository()
+        );
     }
 }

@@ -1,7 +1,12 @@
-package pl.jkanclerz.ecommerce.sales;
+package pl.msokolowski.ecommerce.sales;
 
 import org.junit.jupiter.api.Test;
-import pl.jkanclerz.ecommerce.sales.cart.HashMapCartStorage;
+
+import pl.msokolowski.ecommerce.sales.cart.HashMapCartStorage;
+import pl.msokolowski.ecommerce.sales.offering.Offer;
+import pl.msokolowski.ecommerce.sales.offering.OfferCalculator;
+import pl.msokolowski.ecommerce.sales.reservation.ReservationRepository;
+import pl.msokolowski.ecommerce.sales.reservation.SpyPaymentGateway;
 
 import java.math.BigDecimal;
 
@@ -49,7 +54,12 @@ public class SalesTest {
     }
 
     private SalesFacade thereIsSales() {
-        return new SalesFacade(new HashMapCartStorage());
+        return new SalesFacade(
+                new HashMapCartStorage(),
+                new OfferCalculator(),
+                new SpyPaymentGateway(),
+                new ReservationRepository()
+        );
     }
 
     private String thereIsCustomer(String name) {

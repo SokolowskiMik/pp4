@@ -1,10 +1,10 @@
-package pl.jkanclerz.hello;
+package pl.msokolowski.hello;
 
 import java.util.Collections;
 
 public class App {
     public static void main(String[] args) {
-        var name = "Jakub";
+        var name = "Mikolaj";
         System.out.println(String.format("Hello %s", name));
 
         System.out.println("It Works");

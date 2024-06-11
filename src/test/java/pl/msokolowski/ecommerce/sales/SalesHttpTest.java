@@ -1,4 +1,4 @@
-package pl.jkanclerz.ecommerce.sales;
+package pl.msokolowski.ecommerce.sales;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
@@ -9,7 +9,11 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import pl.jkanclerz.ecommerce.catalog.ProductCatalog;
+
+import pl.msokolowski.ecommerce.catalog.ProductCatalog;
+import pl.msokolowski.ecommerce.sales.offering.Offer;
+import pl.msokolowski.ecommerce.sales.reservation.AcceptOfferRequest;
+import pl.msokolowski.ecommerce.sales.reservation.ReservationDetails;
 
 import java.math.BigDecimal;
 

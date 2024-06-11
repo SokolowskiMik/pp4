@@ -1,4 +1,4 @@
-package pl.jkanclerz.hello;
+package pl.msokolowski.hello;
 
 import org.junit.jupiter.api.Test;
 
